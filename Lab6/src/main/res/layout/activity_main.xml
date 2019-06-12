@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/holo_green_light"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <ListView
+            android:id="@+id/nameList"
+            style="@android:style/Widget.ExpandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="589dp"
+            android:cacheColorHint="@color/colorPrimary"
+            android:longClickable="true"
+            android:scrollbars="none" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_main" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addMan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="@android:color/background_dark"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:srcCompat="@android:drawable/ic_input_add" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:visibility="visible"
+        app:helperText=" "
+        app:hintEnabled="false"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="left|bottom">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/newName"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cursorVisible="true"
+            android:hint="@string/hint"
+            android:textColor="@android:color/background_dark"
+            android:textColorHighlight="@color/colorPrimary"
+            android:textStyle="normal|italic"
+            android:visibility="visible"
+            tools:style="@tools:sample/full_names"
+            tools:text="@tools:sample/full_names" />
+    </android.support.design.widget.TextInputLayout>
+
+</android.support.design.widget.CoordinatorLayout>
